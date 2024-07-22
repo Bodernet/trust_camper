@@ -1,21 +1,18 @@
-import {
-  useEffect,
-  // useState
-} from "react";
+import { useEffect, useState } from "react";
 
 import css from "./CamperCard.module.css";
 
 // import CamperModal from "../../modal/CamperModal";
-// import Iconsvg from "../Icon/Icon";
+import Iconsvg from "../Icon/Icon";
 
 const CamperCard = ({ pickup }) => {
   //   const [isModalOpen, setIsModalOpen] = useState(false);
-  //   const [isFavorite, setIsFavorite] = useState(false);
+  const [isFavorite, setIsFavorite] = useState(false);
 
   useEffect(() => {
     const favorites = JSON.parse(localStorage.getItem("favorites")) || [];
     if (favorites.includes(pickup._id)) {
-      //   setIsFavorite(true);
+      setIsFavorite(true);
     }
   }, [pickup._id]);
 
@@ -27,11 +24,11 @@ const CamperCard = ({ pickup }) => {
     if (favorites.includes(pickup._id)) {
       const updatedFavorites = favorites.filter((id) => id !== pickup._id);
       localStorage.setItem("favorites", JSON.stringify(updatedFavorites));
-      //   setIsFavorite(false);
+      setIsFavorite(false);
     } else {
       favorites.push(pickup._id);
       localStorage.setItem("favorites", JSON.stringify(favorites));
-      //   setIsFavorite(true);
+      setIsFavorite(true);
     }
   };
 
@@ -93,20 +90,20 @@ const CamperCard = ({ pickup }) => {
                 onClick={handleToggleFavorite}
                 className={css.addToFavorite}
               >
-                {/* <Iconsvg
+                <Iconsvg
                   iconName="heart"
                   className={isFavorite ? css.iconHeartPressed : css.iconHeart}
-                /> */}
+                />
               </button>
             </div>
           </div>
           <div className={css.camperAddInfo}>
-            {/* <Iconsvg iconName="rating" className={css.iconRating} /> */}
+            <Iconsvg iconName="rating" className={css.iconRating} />
             <p className={css.camperRating}>{pickup.rating}</p>
             <p className={css.camperReviews}>
               &#x2768;{pickup.reviews.length} Reviews&#x2769;
             </p>
-            {/* <Iconsvg iconName="mapPin" className={css.iconMap} /> */}
+            <Iconsvg iconName="mapPin" className={css.iconMap} />
             <p>{pickup.location}</p>
           </div>
         </div>
@@ -121,10 +118,10 @@ const CamperCard = ({ pickup }) => {
                   className={css.camperProsItem}
                   key={`${pickup._id}-${iconName}`}
                 >
-                  {/* <Iconsvg
+                  <Iconsvg
                     className={css.iconCamperItems}
                     iconName={iconName}
-                  /> */}
+                  />
                   {value} {label}
                 </li>
               )

@@ -35,8 +35,8 @@
   border: 1px solid rgba(16, 24, 40, 0.2);
   border-radius: 20px;
   padding: 24px;
-  width: 888px;
-  height: 358px;
+  max-width: 888px;
+  max-height: 358px;
 }
 
 .loadMore {
@@ -57,4 +57,10 @@
 
 .loadMore:hover {
   border-color: #e44848;
+}
+ul,
+ol,
+li {
+  list-style: none;
+  padding: 0;
 }
