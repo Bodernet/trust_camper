@@ -3,7 +3,7 @@ import css from "./Layout.module.css";
 import { Outlet } from "react-router-dom";
 import { Toaster } from "react-hot-toast";
 import Navigation from "../Navigation/Navigation.jsx";
-import Loader from "../Loader/Loader";
+import Loader from "../Loader/Loader.jsx";
 
 const Layout = () => {
   return (
@@ -18,8 +18,9 @@ const Layout = () => {
         position="top-center"
         reverseOrder={false}
         toastOptions={{
+          duration: 1000,
           style: {
-            marginTop: "25px",
+            marginTop: "45px",
           },
         }}
       />
