@@ -33,9 +33,7 @@ body {
   border: 0;
   box-sizing: border-box;
 }
-a {
-  text-decoration: none;
-}
+
 ul,
 ol,
 li {
@@ -58,7 +56,6 @@ a {
   text-decoration: none;
 }
 ul {
-  list-style: none;
   padding: 0;
   margin: 0;
 }
@@ -67,4 +64,5 @@ img {
 }
 button {
   cursor: pointer;
+  text-decoration: none;
 }

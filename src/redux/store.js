@@ -1,8 +1,7 @@
-import { configureStore } from "@reduxjs/toolkit";
-import { combineReducers } from "redux";
+import { configureStore, combineReducers } from "@reduxjs/toolkit";
 import storage from "redux-persist/lib/storage";
-import { favoritesSlice } from "./favoritesSlice.js";
-import { pickupSlice } from "./pickupSlice.js";
+import { favoritesReducer } from "./favorites/slice";
+import { pickupReducer } from "./pickups/slice";
 import {
   persistStore,
   persistReducer,
@@ -15,14 +14,14 @@ import {
 } from "redux-persist";
 
 const rootReducer = combineReducers({
-  favorites: favoritesSlice.reducer,
-  pickup: pickupSlice.reducer,
+  favorites: favoritesReducer,
+  advert: pickupReducer,
 });
 
 const rootConfig = {
   key: "root",
   storage,
-  whitelist: ["token"],
+  whitelist: ["favorites"],
 };
 
 const persistedReducer = persistReducer(rootConfig, rootReducer);
@@ -36,5 +35,7 @@ const store = configureStore({
       },
     }),
 });
+
 const persistor = persistStore(store);
+
 export { store, persistor };
