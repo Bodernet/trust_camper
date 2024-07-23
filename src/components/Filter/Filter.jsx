@@ -11,7 +11,7 @@ import {
   setForm,
   setLocation,
 } from "../../redux/favorites/slice";
-// import Iconsvg from '../Icon/Icon';
+import Iconsvg from "../Icon/Icon";
 
 const Filter = () => {
   const dispatch = useDispatch();
@@ -61,7 +61,7 @@ const Filter = () => {
               Location
             </label>
             <div className={css.inputWrapper}>
-              {/* <Iconsvg iconName="mapPin" className={css.iconMap} /> */}
+              <Iconsvg iconName="mapPin" className={css.iconMap} />
               <Field
                 type="text"
                 id="location"
@@ -111,10 +111,10 @@ const Filter = () => {
                         }}
                       />
                       <div className={css.filterBoxChosed}>
-                        {/* <Iconsvg
+                        <Iconsvg
                           iconName={item.iconName}
                           className={css.iconFilter}
-                        /> */}
+                        />
                         <span>{item.label}</span>
                       </div>
                     </label>
@@ -145,10 +145,10 @@ const Filter = () => {
                       className={css.radio}
                     />
                     <div className={css.filterBoxChosed}>
-                      {/* <Iconsvg
+                      <Iconsvg
                         iconName={item.iconName}
                         className={css.iconFilterCamper}
-                      /> */}
+                      />
                       <span>{item.label}</span>
                     </div>
                   </label>
