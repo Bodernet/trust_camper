@@ -83,6 +83,7 @@
 }
 
 .filterBoxChosed {
+  box-sizing: border-box;
   width: 112px;
   height: 95px;
   border: 1px solid rgba(16, 24, 40, 0.2);
