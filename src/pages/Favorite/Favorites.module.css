@@ -1,0 +1,109 @@
+.containerFavorite {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 320px;
+  width: 100%;
+  min-height: 620px;
+  padding: 100px 64px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.favoriteTitle {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 45px;
+  color: #101828;
+  margin-bottom: 24px;
+}
+
+.description {
+  font-size: 18px;
+  line-height: 24px;
+  margin-bottom: 18px;
+  color: #475467;
+}
+
+.noFavorites {
+  font-size: 18px;
+  margin-bottom: 18px;
+  color: #475467;
+}
+
+.backToCatalog {
+  position: absolute;
+  top: 32px;
+  right: 10%;
+  text-decoration: none;
+  display: inline;
+  border: none;
+  background-color: #101828;
+  padding: 10px 32px;
+  font-weight: 700;
+  font-size: 20px;
+  color: #e44848;
+  transition: all 500ms cubic-bezier(0.4, 0, 0.2, 1);
+  border-radius: 200px;
+}
+
+.backToCatalog:hover {
+  color: #101828;
+  background-color: #e44848;
+}
+
+.imgFavorite {
+  width: 320px;
+  height: 320px;
+  background-image: url("../../assets/camper.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50% 40%;
+}
+
+@media only screen and (min-width: 768px) {
+  .containerFavorite {
+    width: 768px;
+    max-width: 100%;
+    padding: 100px 64px;
+    line-height: 45px;
+  }
+
+  .imgFavorite {
+    width: 540px;
+    height: 540px;
+  }
+
+  .backToCatalog {
+    top: 32px;
+    font-size: 20px;
+  }
+
+  .description {
+    font-size: 24px;
+    line-height: 32px;
+    margin-bottom: 24px;
+  }
+
+  .noFavorites {
+    font-size: 24px;
+    line-height: 32px;
+    margin-bottom: 24px;
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+  .containerFavorite {
+    width: 100%;
+  }
+
+  .imgFavorite {
+    width: 760px;
+    height: 760px;
+  }
+
+  .favoriteTitle {
+    margin-top: 0px;
+  }
+}
