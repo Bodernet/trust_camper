@@ -1,0 +1,298 @@
+.modalBody {
+  min-width: 288px;
+  max-width: 348px;
+  width: fit-content;
+  border-radius: 20px;
+  padding: 20px;
+  padding-right: 8px;
+  background-color: #ffffff;
+  box-shadow: 0 4px 50px 0 rgba(245, 189, 189, 0.1);
+  height: 100%;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+.modalMainInfo {
+  margin-bottom: 24px;
+}
+
+.modalTitle {
+  max-width: 240px;
+  text-overflow: clip;
+  white-space: wrap;
+  overflow: hidden;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 24px;
+  color: #101828;
+  margin-bottom: 10px;
+}
+
+.modalMainDescr {
+  display: flex;
+  flex-wrap: nowrap;
+  margin-bottom: 16px;
+}
+
+.iconRating {
+  width: 16px;
+  height: 16px;
+  fill: #ffc531;
+  stroke: #ffc531;
+  margin-right: 4px;
+}
+
+.modalRating,
+.modalReviews {
+  text-decoration: underline;
+}
+
+.iconMap {
+  width: 16px;
+  height: 16px;
+  stroke: #101828;
+  fill: none;
+  margin-left: 16px;
+  margin-right: 4px;
+}
+
+.modalPrice {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 24px;
+  color: #101828;
+}
+
+.modalInfo {
+  height: 86%;
+  overflow-x: hidden;
+  overflow-y: auto;
+  padding-right: 8px;
+}
+
+.modalInfo::-webkit-scrollbar-button {
+  display: none;
+}
+
+.modalInfo::-webkit-scrollbar {
+  height: 264px;
+  width: 8px;
+}
+
+.modalInfo::-webkit-scrollbar-track {
+  background: inherit;
+  border-radius: 7px;
+}
+
+.modalInfo::-webkit-scrollbar-thumb {
+  background-color: #f0eff4;
+  border-radius: 7px;
+  border: 3px solid #f0eff4;
+  transition: var(--anim);
+}
+
+.modalInfo::-webkit-scrollbar-thumb:hover {
+  background-color: #d9d9d9;
+  border: 3px solid #d9d9d9;
+}
+
+.imgContainer {
+  min-width: 238px;
+  max-width: 304px;
+  width: 100%;
+  margin-bottom: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.camperImg {
+  border-radius: 10px;
+  overflow: hidden;
+  object-fit: cover;
+}
+
+.modalDescription {
+  margin-bottom: 34px;
+  font-size: 16px;
+  line-height: 24px;
+  color: #475467;
+}
+
+.buttonWrapper {
+  position: relative;
+  margin-bottom: 68px;
+  display: flex;
+  gap: 40px;
+}
+
+.buttonWrapper::before {
+  content: "";
+  position: absolute;
+  bottom: -24px;
+  right: 0px;
+  transform: translateY(-50%);
+  display: block;
+  width: 902px;
+  height: 1px;
+  background-color: rgba(16, 24, 40, 0.2);
+}
+
+.buttonAddInfo {
+  background-color: transparent;
+  border: none;
+  padding: 10px 0px;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 24px;
+  color: #101828;
+  transition: all 500ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.activeTab {
+  background-color: transparent;
+  border: none;
+  padding: 10px 0px;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 24px;
+  color: #101828;
+  transition: all 500ms cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+}
+
+.activeTab::before {
+  content: "";
+  position: absolute;
+  bottom: -24px;
+  right: -8px;
+  transform: translateY(-50%);
+  display: block;
+  width: 120%;
+  height: 5px;
+  background-color: #e44848;
+}
+
+.hidden {
+  display: none;
+}
+
+.activeContainer {
+  min-width: 238px;
+  max-width: 304px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.featuresInfo,
+.reviewsInfo {
+  min-width: 238px;
+  max-width: 304px;
+  width: 100%;
+}
+
+.featuresTitle {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 24px;
+  color: #101828;
+  margin-bottom: 48px;
+  position: relative;
+}
+
+.featuresTitle::before {
+  content: "";
+  position: absolute;
+  bottom: -24px;
+  right: 0px;
+  transform: translateY(-50%);
+  display: block;
+  width: 375px;
+  height: 1px;
+  background-color: rgba(16, 24, 40, 0.2);
+}
+
+@media only screen and (min-width: 375px) {
+  .modalTitle {
+    line-height: 30px;
+    max-width: 286px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .modalBody {
+    width: 704px;
+    max-width: fit-content;
+    padding: 40px;
+    padding-right: 16px;
+  }
+
+  .modalTitle {
+    font-size: 24px;
+    max-width: 592px;
+  }
+
+  .modalPrice {
+    font-size: 24px;
+    line-height: 30px;
+  }
+
+  .modalInfo {
+    padding-right: 16px;
+  }
+
+  .imgContainer {
+    width: 624px;
+    max-width: 100%;
+  }
+
+  .activeContainer {
+    width: 624px;
+    max-width: 100%;
+  }
+
+  .featuresInfo,
+  .reviewsInfo {
+    width: 624px;
+    max-width: 100%;
+  }
+
+  .featuresTitle::before {
+    width: 640px;
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+  .modalBody {
+    width: 982px;
+  }
+
+  .modalTitle {
+    max-width: 864px;
+  }
+
+  .imgContainer {
+    flex-direction: row;
+    width: 902px;
+  }
+
+  .camperImg {
+    height: 310px;
+  }
+
+  .activeContainer {
+    flex-direction: row;
+    width: 902px;
+  }
+
+  .featuresInfo,
+  .reviewsInfo {
+    width: 430px;
+  }
+
+  .featuresTitle::before {
+    width: 430px;
+  }
+}

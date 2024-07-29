@@ -1,0 +1,61 @@
+.modalOpen {
+  overflow: hidden;
+}
+
+.modalBackdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(47, 47, 47, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+  overflow: hidden;
+}
+
+.modalContent {
+  position: relative;
+  width: fit-content;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modalCloseButton {
+  z-index: 150;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0px;
+  transition: all 500ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modalCloseButton:hover .iconClose {
+  stroke: #e44848;
+  fill: #e44848;
+}
+
+.iconClose {
+  width: 24px;
+  height: 24px;
+  stroke: #101828;
+}
+
+@media only screen and (min-width: 768px) {
+  .modalCloseButton {
+    top: 40px;
+    right: 40px;
+  }
+
+  .iconClose {
+    width: 32px;
+    height: 32px;
+  }
+}

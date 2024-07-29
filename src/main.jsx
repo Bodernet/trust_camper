@@ -6,6 +6,7 @@ import { PersistGate } from "redux-persist/integration/react";
 import { HelmetProvider } from "react-helmet-async";
 import { store, persistor } from "./redux/store.js";
 import App from "./App.jsx";
+import "react-datepicker/dist/react-datepicker.css";
 import "./index.css";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
