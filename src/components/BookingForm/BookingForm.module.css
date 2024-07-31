@@ -39,6 +39,7 @@
 }
 
 .field {
+  box-sizing: border-box;
   border-radius: 10px;
   min-width: 238px;
   max-width: 304px;
@@ -55,6 +56,7 @@
 
 @media only screen and (min-width: 768px) {
   .field {
+    height: 56px;
     width: 574px;
     max-width: 100%;
   }
